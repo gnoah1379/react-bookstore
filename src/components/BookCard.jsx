@@ -1,3 +1,5 @@
+import '../css/BookCard.css';
+
 function BookCard({ book }) {
 
     function onFavoriteClick() {
@@ -9,7 +11,7 @@ function BookCard({ book }) {
             <div className="book-poster">
                 <img src={book.image} alt={book.title} />
                 <div className="book-overlay">
-                    <button className="favorite-book" onClick={onFavoriteClick}>☆</button>
+                    <button className="favorite-btn" onClick={onFavoriteClick}>☆</button>
                 </div>
             </div>
             <div className="book-info">

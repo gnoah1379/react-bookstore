@@ -1,4 +1,5 @@
 import BookCard from "../components/bookcard";
+import '../css/Home.css'
 
 function HomePage() {
 
@@ -32,7 +33,7 @@ function HomePage() {
     }
 
     return (
-        <>
+        <div className="home">
             <div>
                 <h1>Welcome to the Bookstore</h1>
                 <p>Discover your next great read!</p>
@@ -46,7 +47,7 @@ function HomePage() {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
-                <button type="submit" className="search-btn">Search</button>
+                <button type="submit" className="search-button">Search</button>
             </form>
 
             <div className="book-grid">
@@ -56,7 +57,7 @@ function HomePage() {
                     )
                 ))}
             </div>
-        </>
+        </div>
     );
 }
 
