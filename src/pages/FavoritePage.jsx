@@ -1,8 +1,9 @@
+import '../css/Favorites.css';
+
 function FavoritePage() {
     return (
         <>
-            <h1>Favorite Page</h1>
-            <div className="empty-favorite">
+            <div className="favorite-empty">
                 <h2>No Favorite Books Here</h2>
                 <p>Start adding books to your favorite.</p>
             </div>
