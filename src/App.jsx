@@ -2,11 +2,12 @@ import './css/App.css'
 import { Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import FavoritePage from "./pages/FavoritePage"
+import { BookProvider } from "./contexts/BookContext"
 import NavBar from "./components/NavBar"
 
 function App() {
   return (
-    <>
+    <BookProvider>
       <NavBar />
       <main className="main-content">
         <Routes>
@@ -16,7 +17,7 @@ function App() {
           {/* <Route path="/book/:id" element={<BookDetail />} /> */}
         </Routes>
       </main>
-    </>
+    </BookProvider>
   )
 }
 
