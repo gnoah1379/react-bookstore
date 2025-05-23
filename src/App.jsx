@@ -1,6 +1,5 @@
 import './css/App.css'
-import { Route } from "react-router-dom"
-import Routers from "./Routers"
+import { Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import FavoritePage from "./pages/FavoritePage"
 import NavBar from "./components/NavBar"
@@ -10,12 +9,12 @@ function App() {
     <>
       <NavBar />
       <main className="main-content">
-        <Routers>
+        <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/favorite" element={<FavoritePage />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/book/:id" element={<BookDetail />} />
-        </Routers>
+          {/* <Route path="/cart" element={<Cart />} /> */}
+          {/* <Route path="/book/:id" element={<BookDetail />} /> */}
+        </Routes>
       </main>
     </>
   )
