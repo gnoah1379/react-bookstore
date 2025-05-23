@@ -9,15 +9,14 @@ function BookCard({ book }) {
     return (
         <div className="book-card">
             <div className="book-poster">
-                <img src={book.image} alt={book.title} />
+                <img src={`https://image.tmdb.org/t/p/w500${book.poster_path}`} alt={book.title} />
                 <div className="book-overlay">
                     <button className="favorite-btn" onClick={onFavoriteClick}>☆</button>
                 </div>
             </div>
             <div className="book-info">
                 <h3>{book.title}</h3>
-                <p>{book.author}</p>
-                <p>{book.price}</p>
+                <p>{book.release_date?.split("-")[0]}</p>
             </div>
         </div>
     );

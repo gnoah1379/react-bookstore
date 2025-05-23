@@ -1,36 +1,48 @@
 import BookCard from "../components/bookcard";
+import { useState, useEffect } from "react";
+import { searchBooks, getAllBooks } from "../services/api";
 import '../css/Home.css'
 
 function HomePage() {
 
     const [searchQuery, setSearchQuery] = useState("");
+    const [books, setBooks] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    const book = [
-        {
-            id: 1,
-            title: "The Great Gatsby",
-            author: "F. Scott Fitzgerald",
-            price: "$10.99",
-        },
-        {
-            id: 2,
-            title: "To Kill a Mockingbird",
-            author: "Harper Lee",
-            price: "$12.99",
-        },
-        {
-            id: 3,
-            title: "1984",
-            author: "George Orwell",
-            price: "$15.99",
-        },
+    useEffect(() => {
+        const loadBooks = async () => {
+            try {
+                const data = await getAllBooks();
+                setBooks(data);
+            } catch (error) {
+                setError("Error fetching books:", error);
+            }
+            finally {
+                setLoading(false);
+            }
+        }
 
-    ];
+        loadBooks();
+    }, []);
 
-    const handlerSearch = (e) => {
+    const handlerSearch = async (e) => {
         e.preventDefault();
-        setSearchQuery("");
-    }
+        if (!searchQuery.trim()) return
+        if (loading) return
+
+        setLoading(true)
+        try {
+            const searchResults = await searchBooks(searchQuery)
+            setBooks(searchResults)
+            setError(null)
+        } catch (err) {
+            console.log(err)
+            setError("Failed to search books...")
+        } finally {
+            setLoading(false)
+        }
+    };
 
     return (
         <div className="home">
@@ -50,13 +62,16 @@ function HomePage() {
                 <button type="submit" className="search-button">Search</button>
             </form>
 
-            <div className="book-grid">
-                {book.map(book => (
-                    book.title.toLowerCase().includes(searchQuery.toLowerCase()) && (
+            {error && <div className="error-message">{error}</div>}
+            {loading ? (
+                <div className="loading">Loading...</div>
+            ) : (
+                <div className="book-grid">
+                    {books.map((book) => (
                         <BookCard key={book.id} book={book} />
-                    )
-                ))}
-            </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
