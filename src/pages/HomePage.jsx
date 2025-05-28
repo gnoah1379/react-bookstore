@@ -66,7 +66,7 @@ function HomePage() {
             {loading ? (
                 <div className="loading">Loading...</div>
             ) : (
-                <div className="book-grid">
+                <div className="books-grid">
                     {books.map((book) => (
                         <BookCard key={book.id} book={book} />
                     ))}

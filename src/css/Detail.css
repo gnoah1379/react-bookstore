@@ -1,0 +1,225 @@
+.detail {
+    padding: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    width: 55%;
+    margin: 0 auto;
+}
+
+.detail .content-box {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.detail .detail-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.detail .detail-content .detail-left-side {
+    width: 500px;
+    position: sticky;
+    top: 16px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: fit-content;
+    margin-bottom: 1rem;
+}
+
+.detail .detail-content .detail-left-side img {
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 94%;
+    height: auto;
+}
+
+.detail .detail-content .detail-left-side .book-img-thumbnails {
+    display: flex;
+    justify-content: left;
+}
+
+.detail .detail-content .detail-left-side .book-img-thumbnails img {
+    width: 20%;
+    height: auto;
+}
+
+.detail .detail-content .detail-left-side .book-img-thumbnails img:hover {
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.detail .detail-content .detail-left-side img:hover {
+    cursor: pointer;
+}
+
+.detail .detail-content .detail-left-side .add-box {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.detail .detail-content .detail-left-side .add-box button {
+    width: 45%;
+}
+
+.detail .detail-content .detail-right-side {
+    width: calc(100% - 500px);
+    margin-left: 1rem;
+}
+
+.detail .detail-content .detail-right-side .book-view p {
+    flex: 1;
+}
+
+.detail .detail-content .detail-right-side .book-view1 {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.detail .detail-content .detail-right-side .book-view2 {
+    display: flex;
+}
+
+.detail .detail-content .detail-right-side .data-table {
+    width: 100%;
+}
+
+.detail .detail-content .detail-right-side .rating {
+    font-size: 1.3rem;
+    margin-right: 0.3rem;
+}
+
+.detail .detail-content .detail-right-side .price {
+    margin-top: -1rem;
+}
+
+.detail .detail-content .detail-right-side .discount-price {
+    font-size: 2rem;
+    color: #ff0000;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.detail .detail-content .detail-right-side .book-stock {
+    background-color: rgba(184, 223, 249, 0.685);
+    padding: 0.5rem;
+    padding-left: 0.8rem;
+    border-radius: 5px;
+}
+
+.detail .detail-content .detail-right-side .book-stock p {
+    color: #1782f5;
+}
+
+.detail .detail-content .detail-right-side .data-table th {
+    text-align: left;
+    font-weight: normal;
+    border-bottom: 1px solid #ededed;
+}
+
+.detail .detail-content .detail-right-side .data-table td {
+    padding-left: 4rem;
+    border-bottom: 1px solid #ededed;
+}
+
+.detail .review-content .review-box {
+    display: flex;
+}
+
+.detail .review-content .review-box .rating-side {
+    width: 500px;
+    display: flex;
+}
+
+.detail .review-content .review-box .rating-side .rating-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.detail .review-content .review-box .rating-side .rating-stars {
+    font-size: 1.7rem;
+}
+
+.detail .review-content .review-box .rating-side .average-rating {
+    font-size: 3rem;
+}
+
+.detail .review-content .review-box .rating-side .rating-breakdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+}
+
+.detail .review-content .review-box .rating-side .rating-item {
+    display: flex;
+}
+
+.detail .review-content .review-box .rating-side span {
+    margin: 0 0.5rem;
+}
+
+.detail .review-content .review-box .rating-side .progress-bar {
+    width: 60%;
+    background-color: #e2e2e2;
+    height: 0.3rem;
+    margin: auto 0;
+}
+
+.detail .review-content .review-box .rating-side .progress-bar .progress {
+    height: 100%;
+    background-color: #1782f5;
+}
+
+.detail .review-content .review-box .review-side {
+    width: calc(100% - 500px);
+}
+
+.detail .review-content .review-box .review-side .comment {
+    display: flex;
+    padding-top: 2.5rem;
+}
+
+.detail .review-content .review-box .review-side .comment textarea {
+    resize: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 70%;
+    margin-right: 2rem;
+    background-color: #ffffff;
+}
+
+.detail .review-content .show-reviews {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #ededed;
+}
+
+.detail .review-content .show-reviews .review {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: #f7f6f6a9;
+    padding: 1rem;
+}
+
+.detail .review-content .show-reviews .review .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.detail .review-content .show-reviews .review .user-info img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: #65656550 solid 1px;
+}

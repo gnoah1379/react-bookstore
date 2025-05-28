@@ -10,6 +10,7 @@ function NavBar() {
             <ul className="navbar-menu">
                 <Link to="/" className="nav-link">Home</Link>
                 <Link to="/favorite" className="nav-link">Favorites</Link>
+                <Link to="/bookDetail" className="nav-link">Book Detail</Link>
             </ul>
         </nav>
     )
