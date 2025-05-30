@@ -1,6 +1,7 @@
 .home {
   padding: 2rem 0;
-  width: 100%;
+  width: 60%;
+  margin: auto;
   box-sizing: border-box;
 }
 
